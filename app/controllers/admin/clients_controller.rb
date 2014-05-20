@@ -1,4 +1,4 @@
-class Admin::ClientsController < Admin::AdminController
+class Admin::ClientsController < Admin::ApplicationController
   def index 
     @client = current_user.client
   end

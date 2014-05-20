@@ -1,17 +1,23 @@
 OmniChannel::Application.routes.draw do
   root 'pages#index'
-  devise_for :users
+  #devise_for :users
+
+  devise_for :users, :controllers => {:sessions =>'authentication/sessions', :passwords =>'authentication/passwords', :invitations => 'authentication/invitations', :registrations => 'authentication/registrations' }
 
   namespace :admin do
     resources :clients
     resources :shopping_list_items
   end
 
-  resources :users 
-  get 'users/show' => 'users#show'
+  namespace :user do
+    resources :users 
+    get 'users/show' => 'users#show'
+    
+    resources :sale_items
+    resources :shopping_list_items
+  end
+
   
-  resources :sale_items
-  resources :shopping_list_items
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

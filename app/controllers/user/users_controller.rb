@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class User::UsersController < User::ApplicationController
 
   def show
     respond_to do |format|

@@ -1,4 +1,4 @@
-class SaleItemsController < ApplicationController
+class User::SaleItemsController < User::ApplicationController
   def index
     @sale_items = @client.sale_items
 
