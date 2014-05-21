@@ -7,6 +7,7 @@ gem 'pg' #database
 gem 'devise' #auth
 gem 'slim' #html templating
 gem "active_model_serializers" #json apis
+gem 'compass-rails'
 
 group :development, :test do
     gem 'better_errors'

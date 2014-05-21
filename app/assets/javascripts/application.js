@@ -11,9 +11,7 @@
 // about supported directives.
 //
 
-//= require jquery
-//= require jquery_ujs
+//= require vendor
+//= require ui
 
-//= require angular
-
-//= require_tree .
+//= require_tree ./flatify
