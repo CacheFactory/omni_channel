@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>676ABC19-5D53-4A80-967F-9C7902D77FB0</string>
+	<string>DA7B5B67-67CC-41FD-AA1C-B6FB5955140A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>OmniChannel</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>738E5485-4E6B-4C25-B95F-AD16278C637E</key>
+		<key>F1A26E30-B840-41D7-8707-BCAC7207A47D</key>
 		<string>ssh://github.com/CacheFactory/omni_channel.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>iphone_app/OmniChannel/OmniChannel.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>738E5485-4E6B-4C25-B95F-AD16278C637E</key>
+		<key>F1A26E30-B840-41D7-8707-BCAC7207A47D</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>738E5485-4E6B-4C25-B95F-AD16278C637E</string>
+	<string>F1A26E30-B840-41D7-8707-BCAC7207A47D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>738E5485-4E6B-4C25-B95F-AD16278C637E</string>
+			<string>F1A26E30-B840-41D7-8707-BCAC7207A47D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>omni_channel</string>
 		</dict>

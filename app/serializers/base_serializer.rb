@@ -1,8 +1,8 @@
 class BaseSerializer < ActiveModel::Serializer
-  attributes :object_id
+  attributes :model_id
   self.root = false
   
-  def object_id
+  def model_id
     object.id
   end
 end

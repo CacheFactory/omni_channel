@@ -8,6 +8,7 @@ gem 'devise' #auth
 gem 'slim' #html templating
 gem "active_model_serializers" #json apis
 gem 'compass-rails'
+gem 'font-awesome-rails'
 
 group :development, :test do
     gem 'better_errors'

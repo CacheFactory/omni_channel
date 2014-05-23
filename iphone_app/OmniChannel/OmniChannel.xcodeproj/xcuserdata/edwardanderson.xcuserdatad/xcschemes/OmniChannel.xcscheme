@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "77201B0C192D57E90010987E"
+               BlueprintIdentifier = "77E54315192EC30C00B7E671"
                BuildableName = "OmniChannel.app"
                BlueprintName = "OmniChannel"
                ReferencedContainer = "container:OmniChannel.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "77201B2C192D57E90010987E"
+               BlueprintIdentifier = "77E54335192EC30C00B7E671"
                BuildableName = "OmniChannelTests.xctest"
                BlueprintName = "OmniChannelTests"
                ReferencedContainer = "container:OmniChannel.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "77201B0C192D57E90010987E"
+            BlueprintIdentifier = "77E54315192EC30C00B7E671"
             BuildableName = "OmniChannel.app"
             BlueprintName = "OmniChannel"
             ReferencedContainer = "container:OmniChannel.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "77201B0C192D57E90010987E"
+            BlueprintIdentifier = "77E54315192EC30C00B7E671"
             BuildableName = "OmniChannel.app"
             BlueprintName = "OmniChannel"
             ReferencedContainer = "container:OmniChannel.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "77201B0C192D57E90010987E"
+            BlueprintIdentifier = "77E54315192EC30C00B7E671"
             BuildableName = "OmniChannel.app"
             BlueprintName = "OmniChannel"
             ReferencedContainer = "container:OmniChannel.xcodeproj">
