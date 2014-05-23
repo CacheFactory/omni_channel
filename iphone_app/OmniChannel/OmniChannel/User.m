@@ -15,6 +15,37 @@ static User *currentUser = nil;
 @implementation User
 @synthesize first_name,last_name,password,email,authentication_token;
 
+- (void)login: (void ( ^ ) ( User *updatedUser))success {
+    RKObjectManager *objectManager = [BaseModel objectManager];
+    
+    [objectManager postObject:self path:@"authentication/users/sign_in" parameters:nil success: ^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        User *userObj =(User *)result.firstObject;
+        [User setCurrentUser:userObj];
+        success(userObj);
+        
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+        
+    } failure: [BaseModel errorHandeler]];
+}
+
+- (void)createAccount: (void ( ^ ) ( User *newUser))success withErrorHandeler:(void ( ^ ) ( RKObjectRequestOperation *operation , NSError *error ))errorHandeler {
+    // POST to create
+    
+    RKObjectManager *objectManager = [BaseModel objectManager];
+    [objectManager postObject:self path:@"authentication/users" parameters:nil success: ^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        User *newUser =(User *)result.firstObject;
+        [User setCurrentUser:newUser];
+        
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+        
+        success(newUser);
+        
+    } failure: errorHandeler];
+}
+
+
 +(id <OmniModel>) belongsTo{ return [Client class];}
 +(id <OmniModel>) hasMany{ return NULL;}
 +(NSString *) modelName{ return @"user";}

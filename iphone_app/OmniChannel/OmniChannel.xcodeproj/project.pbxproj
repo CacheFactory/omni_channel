@@ -26,6 +26,10 @@
 		77E54359192EC3D300B7E671 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E54352192EC3D300B7E671 /* Client.m */; };
 		77E5435A192EC3D300B7E671 /* SaleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E54355192EC3D300B7E671 /* SaleItem.m */; };
 		77E5435B192EC3D300B7E671 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E54357192EC3D300B7E671 /* User.m */; };
+		77E5435F192ECCA200B7E671 /* ShoppingListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5435E192ECCA200B7E671 /* ShoppingListItem.m */; };
+		77E54363192ECF1C00B7E671 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E54361192ECF1C00B7E671 /* LoginViewController.m */; };
+		77E54366192ECF4C00B7E671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E54365192ECF4C00B7E671 /* Main.storyboard */; };
+		77E54368192ED08800B7E671 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E54367192ED08800B7E671 /* Login.storyboard */; };
 		C2FC7C9A12264F34A82F4A7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 101C45F5137540679BE2804A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,12 @@
 		77E54356192EC3D300B7E671 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		77E54357192EC3D300B7E671 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		77E5435C192EC3EE00B7E671 /* OmniModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OmniModel.h; sourceTree = "<group>"; };
+		77E5435D192ECCA200B7E671 /* ShoppingListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListItem.h; sourceTree = "<group>"; };
+		77E5435E192ECCA200B7E671 /* ShoppingListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListItem.m; sourceTree = "<group>"; };
+		77E54360192ECF1C00B7E671 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		77E54361192ECF1C00B7E671 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		77E54365192ECF4C00B7E671 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		77E54367192ED08800B7E671 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,12 +146,16 @@
 			isa = PBXGroup;
 			children = (
 				77E5434E192EC3BB00B7E671 /* models */,
-				77E5432A192EC30C00B7E671 /* AppDelegate.h */,
 				77E54353192EC3D300B7E671 /* Constants.h */,
+				77E5432A192EC30C00B7E671 /* AppDelegate.h */,
 				77E5432B192EC30C00B7E671 /* AppDelegate.m */,
 				77E54330192EC30C00B7E671 /* Images.xcassets */,
 				77E5432D192EC30C00B7E671 /* OmniChannel.xcdatamodeld */,
 				77E54322192EC30C00B7E671 /* Supporting Files */,
+				77E54360192ECF1C00B7E671 /* LoginViewController.h */,
+				77E54361192ECF1C00B7E671 /* LoginViewController.m */,
+				77E54365192ECF4C00B7E671 /* Main.storyboard */,
+				77E54367192ED08800B7E671 /* Login.storyboard */,
 			);
 			path = OmniChannel;
 			sourceTree = "<group>";
@@ -187,6 +201,8 @@
 				77E54356192EC3D300B7E671 /* User.h */,
 				77E54357192EC3D300B7E671 /* User.m */,
 				77E5435C192EC3EE00B7E671 /* OmniModel.h */,
+				77E5435D192ECCA200B7E671 /* ShoppingListItem.h */,
+				77E5435E192ECCA200B7E671 /* ShoppingListItem.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -268,6 +284,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E54368192ED08800B7E671 /* Login.storyboard in Resources */,
+				77E54366192ECF4C00B7E671 /* Main.storyboard in Resources */,
 				77E54326192EC30C00B7E671 /* InfoPlist.strings in Resources */,
 				77E54331192EC30C00B7E671 /* Images.xcassets in Resources */,
 			);
@@ -321,10 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E5435F192ECCA200B7E671 /* ShoppingListItem.m in Sources */,
 				77E5432C192EC30C00B7E671 /* AppDelegate.m in Sources */,
 				77E5435B192EC3D300B7E671 /* User.m in Sources */,
 				77E5435A192EC3D300B7E671 /* SaleItem.m in Sources */,
 				77E54328192EC30C00B7E671 /* main.m in Sources */,
+				77E54363192ECF1C00B7E671 /* LoginViewController.m in Sources */,
 				77E54358192EC3D300B7E671 /* BaseModel.m in Sources */,
 				77E5432F192EC30C00B7E671 /* OmniChannel.xcdatamodeld in Sources */,
 				77E54359192EC3D300B7E671 /* Client.m in Sources */,

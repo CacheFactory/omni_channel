@@ -16,6 +16,6 @@
 +(RKObjectManager *)objectManager;
 +(void) resetObjectManager;
 
-
++ (void ( ^ ) ( RKObjectRequestOperation *operation , NSError *error )) errorHandeler;
 
 @end

@@ -18,5 +18,7 @@
 @property (nonatomic, strong) NSString *authentication_token;
 
 + (User *) getCurrentUser;
+- (void)createAccount: (void ( ^ ) ( User *newUser))success withErrorHandeler:(void ( ^ ) ( RKObjectRequestOperation *operation , NSError *error ))errorHandeler ;
+- (void)login: (void ( ^ ) ( User *updatedUser))success;
 
 @end

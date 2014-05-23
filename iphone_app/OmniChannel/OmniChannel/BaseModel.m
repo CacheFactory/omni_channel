@@ -45,6 +45,38 @@ static RKObjectManager * objectManagerSingleton;
 
 }
 
++ (void ( ^ ) ( RKObjectRequestOperation *operation , NSError *error )) errorHandeler{
+    return ^( RKObjectRequestOperation *operation , NSError *error ){
+        NSHTTPURLResponse *errorResponse  = [error.userInfo valueForKey:@"AFNetworkingOperationFailingURLResponseErrorKey"];
+        
+        if(errorResponse.statusCode ==401 ){
+            //[User logoutCurrentUser];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You are not signed in" message:@"Incorrect email or password" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+            //ViewController *rootController =(ViewController *)[[(AppDelegate *) [[UIApplication sharedApplication]delegate] window] rootViewController];
+            
+            //[rootController dismissViewControllerAnimated:YES completion:nil];
+        }else if(errorResponse.statusCode ==422){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bad email" message:@"The email you entered is already used by another account." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        
+        else if(!errorResponse){
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Sorry we could not connect to our servers, are you connected to the internet?" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+            
+            
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Try again. There was an error." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        
+    };
+}
+
+
 +(RKObjectMapping *)responseMappingForClass:(id <OmniModel>)klass withObjectManager:(RKObjectManager *)objectManager{
     
     RKObjectMapping *responseMapping = [[RKObjectMapping alloc]  initWithClass: [klass class] ];
