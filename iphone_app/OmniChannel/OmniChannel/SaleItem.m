@@ -9,10 +9,15 @@
 #import "SaleItem.h"
 
 @implementation SaleItem
-    +(id <OmniModel>) belongsTo{ return NULL;}
-    +(id <OmniModel>) hasMany{ return NULL;}
-    +(NSString *) modelName{ return @"client";}
-    +(NSArray *) propertyMapping{
-        return @[@"name", @"model_id"];
-    }
+@synthesize name;
+
++(id <OmniModel>) belongsTo{ return NULL;}
++(id <OmniModel>) hasMany{ return NULL;}
++(NSString *) modelName{ return @"client";}
++(NSArray *) propertyMapping{
+    return @[@"name", @"model_id"];
+}
++(NSString *) pathPrefix{
+    return @"/user";
+}
 @end

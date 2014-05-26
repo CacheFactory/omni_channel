@@ -8,6 +8,7 @@
 
 #import "BaseModel.h"
 #import "OmniModel.h"
+#import "Client.h"
 
 @interface User : BaseModel <OmniModel>;
 
@@ -16,9 +17,12 @@
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) NSString *authentication_token;
+@property (nonatomic, strong) Client *client;
 
 + (User *) getCurrentUser;
 - (void)createAccount: (void ( ^ ) ( User *newUser))success withErrorHandeler:(void ( ^ ) ( RKObjectRequestOperation *operation , NSError *error ))errorHandeler ;
 - (void)login: (void ( ^ ) ( User *updatedUser))success;
+- (void)logout: (void ( ^ ) ())success;
+
 
 @end

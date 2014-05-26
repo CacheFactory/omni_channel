@@ -7,12 +7,12 @@
 //
 
 #import "Client.h"
-#import "SaleItem.h"
+#import "ShoppingListItem.h"
 
 @implementation Client
-
+@synthesize sale_items;
 +(id <OmniModel>) belongsTo{ return NULL;}
-+(id <OmniModel>) hasMany{ return [SaleItem class];}
++(id <OmniModel>) hasMany{ return [ShoppingListItem class];}
 +(NSString *) modelName{ return @"client";}
 +(NSArray *) propertyMapping{
     return @[@"name", @"model_id"];

@@ -30,6 +30,8 @@
 		77E54363192ECF1C00B7E671 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E54361192ECF1C00B7E671 /* LoginViewController.m */; };
 		77E54366192ECF4C00B7E671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E54365192ECF4C00B7E671 /* Main.storyboard */; };
 		77E54368192ED08800B7E671 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E54367192ED08800B7E671 /* Login.storyboard */; };
+		77E5436C1933CCB500B7E671 /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5436B1933CCB500B7E671 /* UserSettingsViewController.m */; };
+		77E543701933F03200B7E671 /* NSString+EddieString.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5436F1933F03200B7E671 /* NSString+EddieString.m */; };
 		C2FC7C9A12264F34A82F4A7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 101C45F5137540679BE2804A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,10 @@
 		77E54361192ECF1C00B7E671 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		77E54365192ECF4C00B7E671 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		77E54367192ED08800B7E671 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		77E5436A1933CCB500B7E671 /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingsViewController.h; sourceTree = "<group>"; };
+		77E5436B1933CCB500B7E671 /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingsViewController.m; sourceTree = "<group>"; };
+		77E5436E1933F03200B7E671 /* NSString+EddieString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EddieString.h"; sourceTree = "<group>"; };
+		77E5436F1933F03200B7E671 /* NSString+EddieString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EddieString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,8 @@
 		77E54321192EC30C00B7E671 /* OmniChannel */ = {
 			isa = PBXGroup;
 			children = (
+				77E5436D1933F00F00B7E671 /* categories */,
+				77E543691933CC9600B7E671 /* Main */,
 				77E5434E192EC3BB00B7E671 /* models */,
 				77E54353192EC3D300B7E671 /* Constants.h */,
 				77E5432A192EC30C00B7E671 /* AppDelegate.h */,
@@ -205,6 +213,24 @@
 				77E5435E192ECCA200B7E671 /* ShoppingListItem.m */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		77E543691933CC9600B7E671 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				77E5436A1933CCB500B7E671 /* UserSettingsViewController.h */,
+				77E5436B1933CCB500B7E671 /* UserSettingsViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		77E5436D1933F00F00B7E671 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				77E5436E1933F03200B7E671 /* NSString+EddieString.h */,
+				77E5436F1933F03200B7E671 /* NSString+EddieString.m */,
+			);
+			name = categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,10 +369,12 @@
 				77E5432C192EC30C00B7E671 /* AppDelegate.m in Sources */,
 				77E5435B192EC3D300B7E671 /* User.m in Sources */,
 				77E5435A192EC3D300B7E671 /* SaleItem.m in Sources */,
+				77E5436C1933CCB500B7E671 /* UserSettingsViewController.m in Sources */,
 				77E54328192EC30C00B7E671 /* main.m in Sources */,
 				77E54363192ECF1C00B7E671 /* LoginViewController.m in Sources */,
 				77E54358192EC3D300B7E671 /* BaseModel.m in Sources */,
 				77E5432F192EC30C00B7E671 /* OmniChannel.xcdatamodeld in Sources */,
+				77E543701933F03200B7E671 /* NSString+EddieString.m in Sources */,
 				77E54359192EC3D300B7E671 /* Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

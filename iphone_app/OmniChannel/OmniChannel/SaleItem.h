@@ -10,5 +10,5 @@
 #import "OmniModel.h"
 
 @interface SaleItem : BaseModel<OmniModel>
-
+@property (nonatomic,strong) NSString *name;
 @end

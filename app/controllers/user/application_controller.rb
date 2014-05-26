@@ -2,7 +2,6 @@ class User::ApplicationController < ApplicationController
   before_filter :authenticate_user_from_token!
 
   def authenticate_user_from_token!
-    binding.pry
     user_email = request.headers['HTTP_EMAIL']
     user_auth_token = request.headers['HTTP_AUTHENTICATION_TOKEN']
     user = user_email && User.find_by_email(user_email)

@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
+#import "OmniModel.h"
 
 @interface BaseModel : NSObject
 
 @property NSInteger model_id;
+
+- (void)refreshModel: (void ( ^ ) ( id <OmniModel>))success;
+- (void)updateModel: (void ( ^ ) ( id <OmniModel>))success;
 
 +(RKObjectManager *)objectManager;
 +(void) resetObjectManager;

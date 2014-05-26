@@ -13,11 +13,35 @@
 #import "User.h"
 #import "Client.h"
 #import "SaleItem.h"
+#import "NSString+EddieString.h"
 
 static RKObjectManager * objectManagerSingleton;
 
 @implementation BaseModel
 @synthesize model_id;
+
+- (void)refreshModel: (void ( ^ ) ( id <OmniModel>))success{
+    
+    [[BaseModel objectManager] getObject:self path: [self pathForModel]  parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        
+        success(result.firstObject);
+        
+    } failure: [BaseModel errorHandeler]];
+}
+- (void)updateModel: (void ( ^ ) ( id <OmniModel>))success{
+    
+    [[BaseModel objectManager] patchObject:self path:[self pathForModel] parameters:nil success: ^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        success(result.firstObject);
+        
+    } failure: [BaseModel errorHandeler]];
+}
+
+-(NSString *)pathForModel{
+    id <OmniModel> omniModel = self;
+    NSString *path =[NSString stringWithFormat:@"%@/%@/%i", [[omniModel class] pathPrefix],[[[omniModel class] modelName] pluralize], self.model_id];
+    
+    return path;
+}
 
 +(RKObjectManager *)objectManager{
     if (!objectManagerSingleton) {
@@ -53,9 +77,6 @@ static RKObjectManager * objectManagerSingleton;
             //[User logoutCurrentUser];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You are not signed in" message:@"Incorrect email or password" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [alert show];
-            //ViewController *rootController =(ViewController *)[[(AppDelegate *) [[UIApplication sharedApplication]delegate] window] rootViewController];
-            
-            //[rootController dismissViewControllerAnimated:YES completion:nil];
         }else if(errorResponse.statusCode ==422){
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bad email" message:@"The email you entered is already used by another account." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [alert show];

@@ -13,4 +13,5 @@
     +(id <OmniModel>) belongsTo;
     +(id <OmniModel>) hasMany;
     +(NSString *) modelName;
+    +(NSString *) pathPrefix;
 @end

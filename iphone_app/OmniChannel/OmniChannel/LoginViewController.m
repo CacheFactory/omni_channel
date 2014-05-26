@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "User.h"
 #import "BaseModel.h"
+#import "NSString+EddieString.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
@@ -27,13 +28,23 @@
     return self;
 }
 - (IBAction)loginButtonPressed:(id)sender {
+    User *user = [User new];
+    user.email = self.emailField.text;
+    user.password = self.passwordField.text;
+    
+    [user login:^(User *loggedInUser) {
+        [self showMainStoryboard];
+        
+    }];
+}
+- (IBAction)createUserButtonPressed:(id)sender {
     NSString *message = @"";
     User *user = [User new];
     user.email = self.emailField.text;
     user.password = self.passwordField.text;
 
     
-    if(![self NSStringIsValidEmail:user.email]){
+    if(![user.email isValidEmail]){
         message = @"Invalid email address";
     }else if(user.password.length < 8){
         message = @"Password must be 8 characters long";
@@ -44,25 +55,18 @@
         [alert show];
     }else{
         [user createAccount:^(User *user) {
-            /*
-            ViewController *presentingViewController = (ViewController *)self.presentingViewController;
-            [self dismissViewControllerAnimated:YES completion:^{
-                [presentingViewController  showLocationsWithAnnimation: YES];
-            }];
-            */
+            [self showMainStoryboard];
         } withErrorHandeler: [BaseModel errorHandeler]];
     }
 }
 
--(BOOL) NSStringIsValidEmail:(NSString *)checkString
-{
-    BOOL stricterFilter = YES; // Discussion http://blog.logichigh.com/2010/09/02/validating-an-e-mail-address/
-    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
-    NSString *laxString = @".+@([A-Za-z0-9]+\\.)+[A-Za-z]{2}[A-Za-z]*";
-    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:checkString];
+-(void)showMainStoryboard{
+    UIStoryboard *settingsStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *initialSettingsVC = [settingsStoryboard instantiateInitialViewController];
+    initialSettingsVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:initialSettingsVC animated:YES completion:nil];
 }
+
 
 - (void)viewDidLoad
 {

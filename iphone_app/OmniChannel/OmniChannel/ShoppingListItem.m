@@ -9,12 +9,15 @@
 #import "ShoppingListItem.h"
 
 @implementation ShoppingListItem
-
-    +(id <OmniModel>) belongsTo{ return NULL;}
-    +(id <OmniModel>) hasMany{ return NULL;}
-    +(NSString *) modelName{ return @"shopping_list_item";}
-    +(NSArray *) propertyMapping{
-        return @[@"name", @"model_id"];
-    }
+@synthesize name;
++(id <OmniModel>) belongsTo{ return NULL;}
++(id <OmniModel>) hasMany{ return NULL;}
++(NSString *) modelName{ return @"shopping_list_item";}
++(NSArray *) propertyMapping{
+    return @[@"name", @"model_id"];
+}
++(NSString *) pathPrefix{
+    return @"/user";
+}
 
 @end

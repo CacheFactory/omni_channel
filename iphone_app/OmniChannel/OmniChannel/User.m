@@ -13,20 +13,32 @@
 static User *currentUser = nil;
 
 @implementation User
-@synthesize first_name,last_name,password,email,authentication_token;
+@synthesize first_name,last_name,password,email,authentication_token, client;
 
 - (void)login: (void ( ^ ) ( User *updatedUser))success {
     RKObjectManager *objectManager = [BaseModel objectManager];
     
     [objectManager postObject:self path:@"authentication/users/sign_in" parameters:nil success: ^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        
         User *userObj =(User *)result.firstObject;
         [User setCurrentUser:userObj];
+        [BaseModel resetObjectManager];// to set auth_token
         success(userObj);
         
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
          (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
         
     } failure: [BaseModel errorHandeler]];
+}
+
+-(void)refreshModel:(void (^)(id<OmniModel>))success{
+    [super refreshModel:(void (^)(id<OmniModel>)) ^{
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"UserRefreshed"
+         object:self
+         userInfo:nil];
+        
+    }];
 }
 
 - (void)createAccount: (void ( ^ ) ( User *newUser))success withErrorHandeler:(void ( ^ ) ( RKObjectRequestOperation *operation , NSError *error ))errorHandeler {
@@ -36,13 +48,22 @@ static User *currentUser = nil;
     [objectManager postObject:self path:@"authentication/users" parameters:nil success: ^(RKObjectRequestOperation *operation, RKMappingResult *result) {
         User *newUser =(User *)result.firstObject;
         [User setCurrentUser:newUser];
-        
+        [BaseModel resetObjectManager];// to set auth_token
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
          (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
         
         success(newUser);
         
     } failure: errorHandeler];
+}
+
+- (void)logout: (void ( ^ ) ())success{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"currentUser"];
+    [defaults synchronize];
+    currentUser=nil;
+    [BaseModel resetObjectManager]; //for auth token cache
+    success();
 }
 
 
@@ -54,6 +75,10 @@ static User *currentUser = nil;
     return @[@"first_name", @"last_name", @"password", @"email", @"authentication_token", @"model_id"];
 }
 
++(NSString *) pathPrefix{
+    return @"/user";
+}
+
 + (void) setCurrentUser:(User *)user{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *userDict = @{@"email": user.email,
@@ -63,14 +88,6 @@ static User *currentUser = nil;
     currentUser=user;
 }
 
-+(void) logoutCurrentUser{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults removeObjectForKey:@"currentUser"];
-    [defaults synchronize];
-    currentUser=nil;
-    [BaseModel resetObjectManager]; //for auth token cache
-    
-}
 
 + (User *) getCurrentUser{
     if(currentUser){
@@ -83,6 +100,7 @@ static User *currentUser = nil;
             user.email = [userDict objectForKey:@"email"];
             user.authentication_token = [userDict objectForKey:@"authentication_token"];
             [User setCurrentUser:user];
+            [user refreshModel:nil];
             return user;
             
         }

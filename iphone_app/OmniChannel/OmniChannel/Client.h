@@ -12,4 +12,6 @@
 @interface Client : BaseModel <OmniModel>
 @property (nonatomic, strong) NSString *name;
 
+@property (nonatomic,strong) NSArray *sale_items;
+
 @end

@@ -1,13 +1,18 @@
 OmniChannel::Application.routes.draw do
   root 'pages#index'
-  #devise_for :users
+  devise_for :users
 
-  devise_for :users, :controllers => {:sessions =>'authentication/sessions', :passwords =>'authentication/passwords', :invitations => 'authentication/invitations', :registrations => 'authentication/registrations' }
+  namespace :authentication do
+    devise_for :users, :controllers => {:sessions =>'authentication/sessions', :passwords =>'authentication/passwords', :invitations => 'authentication/invitations', :registrations => 'authentication/registrations' }
+  end
+  
 
   namespace :admin do
     resources :clients
     resources :shopping_list_items
   end
+
+  
 
   namespace :user do
     resources :users 

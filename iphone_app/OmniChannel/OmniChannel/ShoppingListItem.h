@@ -10,5 +10,5 @@
 #import "OmniModel.h"
 
 @interface ShoppingListItem : BaseModel <OmniModel>
-
+@property (nonatomic,strong) NSString *name;
 @end
