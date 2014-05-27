@@ -1,6 +1,6 @@
 class Admin::BeaconsController < Admin::ApplicationController
   def index
-    @beacons = Beacons.all
+    @beacons = Beacon.all
   end
 
   def new

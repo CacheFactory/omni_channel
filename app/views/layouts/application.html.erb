@@ -8,8 +8,7 @@
   <%= javascript_include_tag "application"  %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<body >
+<body id="app" class="ng-scope">
         <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -26,8 +25,10 @@
             </div>
 
             <div class="view-container">
-                <section class="animate-fade-up">
+                <section id="content">
+                  <div class="page page-dashboard ng-scope">
                   <%= yield %>
+                </div>
                 </section>
             </div>
         </div>

@@ -1,0 +1,27 @@
+header.clearfix
+  a.toggle-min href="#/" 
+    i.fa.fa-bars
+  /! Logo
+  .logo
+    a href="#/" 
+      span Omni
+  /! needs to be put after logo to make it working
+  .menu-button toggle-off-canvas="" 
+    span.icon-bar
+      = render 'layouts/alerts'
+  .top-nav
+    ul.nav-right.pull-right.list-unstyled
+      li.dropdown.text-normal.nav-profile
+        a.dropdown-toggle
+          img.img-circle.img30_30 alt="" src="images/g1.jpg" 
+            span.hidden-xs
+              span data-i18n=("Lisa Doe") 
+        ul.dropdown-menu.with-arrow.pull-right
+          li
+            a
+              i.fa.fa-user
+              span My Profile
+          li
+            a data-method="delete" href=destroy_user_session_path 
+              i.fa.fa-sign-out
+              span data-i18n=""  Log Out

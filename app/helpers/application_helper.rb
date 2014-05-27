@@ -4,4 +4,8 @@ module ApplicationHelper
     'Omni'
   end
 
+  def product_name
+    'Omni'
+  end
+
 end
