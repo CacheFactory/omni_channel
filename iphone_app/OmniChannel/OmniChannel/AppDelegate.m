@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "User.h"
+#import <ContextCore/QLContextCoreConnector.h>
 
 @implementation AppDelegate
 
@@ -18,7 +19,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
+    
+    QLContextCoreConnector *connector = [QLContextCoreConnector new];
+    [connector enableFromViewController:self.window.rootViewController success:^
+     {
+         NSLog(@"Gimbal enabled");
+     } failure:^(NSError *error) {
+         NSLog(@"Failed to initialize gimbal %@", error);
+     }];
+    
     [self showCorrectRootViewController];
     return YES;
 }

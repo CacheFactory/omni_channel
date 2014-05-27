@@ -6,6 +6,7 @@ class Admin::ApplicationController < ApplicationController
   
 
   def get_client
+    ClientScope.client_id = current_user.client_id 
     @client = current_user.client
   end
 

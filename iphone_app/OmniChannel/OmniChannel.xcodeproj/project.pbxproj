@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771CFD07193518C500FD6C97 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD06193518C500FD6C97 /* CoreBluetooth.framework */; };
+		771CFD0C193518FA00FD6C97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD08193518FA00FD6C97 /* CoreLocation.framework */; };
+		771CFD0D193518FA00FD6C97 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD09193518FA00FD6C97 /* libz.dylib */; };
+		771CFD0E193518FA00FD6C97 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD0A193518FA00FD6C97 /* MapKit.framework */; };
+		771CFD0F193518FA00FD6C97 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD0B193518FA00FD6C97 /* Security.framework */; };
+		771CFD221935197900FD6C97 /* FYX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD101935197900FD6C97 /* FYX.framework */; };
+		771CFD231935197900FD6C97 /* ContextProfiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD121935197900FD6C97 /* ContextProfiling.framework */; };
+		771CFD241935197900FD6C97 /* rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = 771CFD141935197900FD6C97 /* rules.txt */; };
+		771CFD251935197900FD6C97 /* ContextLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD161935197900FD6C97 /* ContextLocation.framework */; };
+		771CFD261935197900FD6C97 /* DataModels.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 771CFD181935197900FD6C97 /* DataModels.bundle */; };
+		771CFD271935197900FD6C97 /* ContextCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD1A1935197900FD6C97 /* ContextCore.framework */; };
+		771CFD281935197900FD6C97 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD1D1935197900FD6C97 /* NetworkServices.framework */; };
+		771CFD291935197900FD6C97 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD201935197900FD6C97 /* Common.framework */; };
+		771CFD2B19351A0D00FD6C97 /* UserContext.plist in Resources */ = {isa = PBXBuildFile; fileRef = 771CFD2A19351A0D00FD6C97 /* UserContext.plist */; };
 		77E5431A192EC30C00B7E671 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E54319192EC30C00B7E671 /* Foundation.framework */; };
 		77E5431C192EC30C00B7E671 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E5431B192EC30C00B7E671 /* CoreGraphics.framework */; };
 		77E5431E192EC30C00B7E671 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E5431D192EC30C00B7E671 /* UIKit.framework */; };
@@ -48,6 +62,20 @@
 /* Begin PBXFileReference section */
 		101C45F5137540679BE2804A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		232B63A18C3E41A49E2A20E4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		771CFD06193518C500FD6C97 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		771CFD08193518FA00FD6C97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		771CFD09193518FA00FD6C97 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		771CFD0A193518FA00FD6C97 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		771CFD0B193518FA00FD6C97 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		771CFD101935197900FD6C97 /* FYX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FYX.framework; sourceTree = "<group>"; };
+		771CFD121935197900FD6C97 /* ContextProfiling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextProfiling.framework; sourceTree = "<group>"; };
+		771CFD141935197900FD6C97 /* rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rules.txt; sourceTree = "<group>"; };
+		771CFD161935197900FD6C97 /* ContextLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextLocation.framework; sourceTree = "<group>"; };
+		771CFD181935197900FD6C97 /* DataModels.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DataModels.bundle; sourceTree = "<group>"; };
+		771CFD1A1935197900FD6C97 /* ContextCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextCore.framework; sourceTree = "<group>"; };
+		771CFD1D1935197900FD6C97 /* NetworkServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = "<group>"; };
+		771CFD201935197900FD6C97 /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Common.framework; sourceTree = "<group>"; };
+		771CFD2A19351A0D00FD6C97 /* UserContext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserContext.plist; sourceTree = "<group>"; };
 		77E54316192EC30C00B7E671 /* OmniChannel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmniChannel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E54319192EC30C00B7E671 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77E5431B192EC30C00B7E671 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,8 +121,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77E5431C192EC30C00B7E671 /* CoreGraphics.framework in Frameworks */,
+				771CFD0C193518FA00FD6C97 /* CoreLocation.framework in Frameworks */,
+				771CFD281935197900FD6C97 /* NetworkServices.framework in Frameworks */,
+				771CFD251935197900FD6C97 /* ContextLocation.framework in Frameworks */,
+				771CFD231935197900FD6C97 /* ContextProfiling.framework in Frameworks */,
+				771CFD271935197900FD6C97 /* ContextCore.framework in Frameworks */,
+				771CFD291935197900FD6C97 /* Common.framework in Frameworks */,
+				771CFD0D193518FA00FD6C97 /* libz.dylib in Frameworks */,
+				771CFD221935197900FD6C97 /* FYX.framework in Frameworks */,
+				771CFD0E193518FA00FD6C97 /* MapKit.framework in Frameworks */,
+				771CFD0F193518FA00FD6C97 /* Security.framework in Frameworks */,
 				77E54320192EC30C00B7E671 /* CoreData.framework in Frameworks */,
+				771CFD07193518C500FD6C97 /* CoreBluetooth.framework in Frameworks */,
+				77E5431C192EC30C00B7E671 /* CoreGraphics.framework in Frameworks */,
 				77E5431E192EC30C00B7E671 /* UIKit.framework in Frameworks */,
 				77E5431A192EC30C00B7E671 /* Foundation.framework in Frameworks */,
 				C2FC7C9A12264F34A82F4A7B /* libPods.a in Frameworks */,
@@ -115,6 +154,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		771CFD111935197900FD6C97 /* ContextProfiling.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				771CFD121935197900FD6C97 /* ContextProfiling.framework */,
+				771CFD131935197900FD6C97 /* Resources */,
+			);
+			path = ContextProfiling.embeddedframework;
+			sourceTree = "<group>";
+		};
+		771CFD131935197900FD6C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				771CFD141935197900FD6C97 /* rules.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		771CFD151935197900FD6C97 /* ContextLocation.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				771CFD161935197900FD6C97 /* ContextLocation.framework */,
+				771CFD171935197900FD6C97 /* Resources */,
+			);
+			path = ContextLocation.embeddedframework;
+			sourceTree = "<group>";
+		};
+		771CFD171935197900FD6C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				771CFD181935197900FD6C97 /* DataModels.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		771CFD191935197900FD6C97 /* ContextCore.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				771CFD1A1935197900FD6C97 /* ContextCore.framework */,
+				771CFD1B1935197900FD6C97 /* Resources */,
+			);
+			path = ContextCore.embeddedframework;
+			sourceTree = "<group>";
+		};
+		771CFD1B1935197900FD6C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		771CFD1C1935197900FD6C97 /* NetworkServices.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				771CFD1D1935197900FD6C97 /* NetworkServices.framework */,
+				771CFD1E1935197900FD6C97 /* Resources */,
+			);
+			path = NetworkServices.embeddedframework;
+			sourceTree = "<group>";
+		};
+		771CFD1E1935197900FD6C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		771CFD1F1935197900FD6C97 /* Common.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				771CFD201935197900FD6C97 /* Common.framework */,
+				771CFD211935197900FD6C97 /* Resources */,
+			);
+			path = Common.embeddedframework;
+			sourceTree = "<group>";
+		};
+		771CFD211935197900FD6C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		77E5430D192EC30C00B7E671 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +259,17 @@
 		77E54318192EC30C00B7E671 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				771CFD101935197900FD6C97 /* FYX.framework */,
+				771CFD111935197900FD6C97 /* ContextProfiling.embeddedframework */,
+				771CFD151935197900FD6C97 /* ContextLocation.embeddedframework */,
+				771CFD191935197900FD6C97 /* ContextCore.embeddedframework */,
+				771CFD1C1935197900FD6C97 /* NetworkServices.embeddedframework */,
+				771CFD1F1935197900FD6C97 /* Common.embeddedframework */,
+				771CFD08193518FA00FD6C97 /* CoreLocation.framework */,
+				771CFD09193518FA00FD6C97 /* libz.dylib */,
+				771CFD0A193518FA00FD6C97 /* MapKit.framework */,
+				771CFD0B193518FA00FD6C97 /* Security.framework */,
+				771CFD06193518C500FD6C97 /* CoreBluetooth.framework */,
 				77E54319192EC30C00B7E671 /* Foundation.framework */,
 				77E5431B192EC30C00B7E671 /* CoreGraphics.framework */,
 				77E5431D192EC30C00B7E671 /* UIKit.framework */,
@@ -164,6 +296,7 @@
 				77E54361192ECF1C00B7E671 /* LoginViewController.m */,
 				77E54365192ECF4C00B7E671 /* Main.storyboard */,
 				77E54367192ED08800B7E671 /* Login.storyboard */,
+				771CFD2A19351A0D00FD6C97 /* UserContext.plist */,
 			);
 			path = OmniChannel;
 			sourceTree = "<group>";
@@ -311,9 +444,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E54368192ED08800B7E671 /* Login.storyboard in Resources */,
+				771CFD2B19351A0D00FD6C97 /* UserContext.plist in Resources */,
 				77E54366192ECF4C00B7E671 /* Main.storyboard in Resources */,
 				77E54326192EC30C00B7E671 /* InfoPlist.strings in Resources */,
 				77E54331192EC30C00B7E671 /* Images.xcassets in Resources */,
+				771CFD241935197900FD6C97 /* rules.txt in Resources */,
+				771CFD261935197900FD6C97 /* DataModels.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +629,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ContextProfiling.embeddedframework",
+					"$(PROJECT_DIR)/ContextLocation.embeddedframework",
+					"$(PROJECT_DIR)/ContextCore.embeddedframework",
+					"$(PROJECT_DIR)/NetworkServices.embeddedframework",
+					"$(PROJECT_DIR)/Common.embeddedframework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OmniChannel/OmniChannel-Prefix.pch";
 				INFOPLIST_FILE = "OmniChannel/OmniChannel-Info.plist";
@@ -507,6 +652,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ContextProfiling.embeddedframework",
+					"$(PROJECT_DIR)/ContextLocation.embeddedframework",
+					"$(PROJECT_DIR)/ContextCore.embeddedframework",
+					"$(PROJECT_DIR)/NetworkServices.embeddedframework",
+					"$(PROJECT_DIR)/Common.embeddedframework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OmniChannel/OmniChannel-Prefix.pch";
 				INFOPLIST_FILE = "OmniChannel/OmniChannel-Info.plist";

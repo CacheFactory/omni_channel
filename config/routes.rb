@@ -10,6 +10,7 @@ OmniChannel::Application.routes.draw do
   namespace :admin do
     resources :clients
     resources :shopping_list_items
+    resources :beacons
   end
 
   

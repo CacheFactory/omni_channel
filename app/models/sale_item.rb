@@ -1,3 +1,3 @@
-class SaleItem < ActiveRecord::Base
+class SaleItem < ClientModel
   belongs_to :client
 end
