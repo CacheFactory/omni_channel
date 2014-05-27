@@ -15,8 +15,8 @@ describe User::UsersController do
     get :show
 
     parsed_body = JSON.parse(response.body)
-    parsed_body['first_name'].should == @user.first_name
-    parsed_body['client']['model_id'].should == @client.id
-    parsed_body['client']['sale_items'].count.should == @client.sale_items.count
+    parsed_body['user']['first_name'].should == @user.first_name
+    parsed_body['user']['client']['model_id'].should == @client.id
+    parsed_body['user']['client']['sale_items'].count.should == @client.sale_items.count
   end
 end

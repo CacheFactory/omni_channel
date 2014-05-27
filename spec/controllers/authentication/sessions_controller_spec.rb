@@ -12,7 +12,7 @@ describe Authentication::SessionsController do
     post :create, {:user => {:email => user.email, :password => user.password}}
     response.should be_success
     parsed_user = JSON.parse(response.body)
-    parsed_user['authentication_token'].length.should > 0
+    parsed_user['user']['authentication_token'].length.should > 0
 
   end
   

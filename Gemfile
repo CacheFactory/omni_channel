@@ -9,6 +9,7 @@ gem 'slim' #html templating
 gem "active_model_serializers" #json apis
 gem 'compass-rails'
 gem 'font-awesome-rails'
+gem 'paperclip'
 
 group :development, :test do
     gem 'better_errors'
