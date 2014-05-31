@@ -1,0 +1,30 @@
+-if @beacon.errors.any?
+  =render 'shared/errors', :errors => @beacon.errors.full_messages
+section.panel.panel-default
+  .panel-heading
+    strong
+      span.glyphicon.glyphicon-th
+      | Create a new beacon
+  .panel-body
+    =form_for ['admin',@beacon], :html => {:class => 'form-horizontal'} do |f|
+        .form-group
+          label.col-sm-2 Name
+          .col-sm-10
+            =f.text_field :name, :class => 'form-control'
+        .form-group
+          label.col-sm-2 Factory ID
+          .col-sm-10
+            =f.text_field :factory_id, :class => 'form-control'
+        .form-group
+          label.col-sm-2 Department
+          .col-sm-10.ui-select
+            =f.select :beacon_category,  BeaconCategory.all.collect {|b| [ b.name, b.id ] }
+        .form-group
+          label.col-sm-2 
+          .col-sm-10
+            =f.submit
+          
+
+
+
+

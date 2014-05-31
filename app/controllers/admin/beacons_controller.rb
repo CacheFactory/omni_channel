@@ -4,11 +4,11 @@ class Admin::BeaconsController < Admin::ApplicationController
   end
 
   def new
-    @beacon = Beacon.create
+    @beacon = Beacon.new
   end
 
   def create
-    @beacon = Beacon.create beacon_specs
+    @beacon = Beacon.create beacon_params
 
     if @beacon.errors.empty?
       redirect_to admin_beacons_path, :notice => "You have successfully created a beacon" 
@@ -17,9 +17,21 @@ class Admin::BeaconsController < Admin::ApplicationController
     end
   end
 
-  def beacon_specs
-    params.require(:beacon).permit(:name, :uuid,:beacon_category_id).tap do |beacon_specs|
-      beacon_specs['client_id'] = current_user.client_id
+  def update
+    @beacon = Beacon.find params[:id]
+
+    if @beacon.update_attributes(beacon_params)
+      redirect_to admin_beacons_path, :notice => "You have succesfully updated your beacon" 
+    else
+      render :edit
+    end
+  end
+
+  protected
+
+  def beacon_params
+    params.require(:beacon).permit(:name, :factory_id,:beacon_category_id).tap do |beacon_params|
+      beacon_params['client_id'] = current_user.client_id
     end
   end  
 end

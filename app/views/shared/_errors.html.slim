@@ -1,0 +1,8 @@
+section.panel.panel-default
+  .panel-heading
+    span.glyphicon.glyphicon-th
+    | Errors
+  .panel-body.ng-scope 
+    -errors.each do |error|
+      .callout.callout-danger
+        p #{error}

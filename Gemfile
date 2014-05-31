@@ -10,6 +10,7 @@ gem "active_model_serializers" #json apis
 gem 'compass-rails'
 gem 'font-awesome-rails'
 gem 'paperclip'
+gem 'httparty'
 
 group :development, :test do
     gem 'better_errors'
@@ -19,6 +20,7 @@ group :development, :test do
     gem 'rspec-rails' #testing
     gem 'faker'
     gem 'json_spec'
+    gem 'rspec-mocks'
 end
 
 # Use SCSS for stylesheets

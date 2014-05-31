@@ -5,7 +5,7 @@ class ClientModel < ActiveRecord::Base
   before_create :set_client_id
 
   def set_client_id
-    self.client_id = $client_id 
+    self.client_id = ClientScope.client_id
   end
 
   def self.class_display_name

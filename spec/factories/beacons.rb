@@ -2,7 +2,10 @@
 
 FactoryGirl.define do
   factory :beacon do
-    uuid Faker::Number.number(32)
+    name 'bla'
+    factory_id '123'
     association :beacon_category
+    association :client
+    
   end
 end
