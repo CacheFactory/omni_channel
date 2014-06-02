@@ -1,0 +1,21 @@
+section
+  .page.page-table.ng-scope
+    .panel.panel-default
+      .panel-heading
+        strong
+          span.glyphicon.glyphicon-th
+          | Sale items
+      table.table
+        thead
+          tr
+            th Name
+            th Description
+            th Price
+        tbody
+          -@sale_items.each do |sale_item|
+            tr
+              td #{sale_item.name}
+              td #{sale_item.description}
+              td #{sale_item.price}
+                
+

@@ -6,5 +6,10 @@ FactoryGirl.define do
     description "MyText"
     price 1.5
     association :client
+
+    after(:create) do |sale_item, evaluator|
+      sale_item.client =  evaluator.client if  evaluator.client
+      sale_item.save
+    end
   end
 end

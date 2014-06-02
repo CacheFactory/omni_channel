@@ -7,5 +7,10 @@ FactoryGirl.define do
     association :beacon_category
     association :client
     
+    after(:create) do |beacon, evaluator|
+      beacon.client =  evaluator.client if  evaluator.client
+      beacon.save
+    end
+
   end
 end

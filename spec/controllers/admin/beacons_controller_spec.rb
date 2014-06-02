@@ -14,11 +14,19 @@ describe Admin::BeaconsController do
     Beacon.unscoped.last.factory_id.should == beacon.factory_id
   end
 
+  it 'should be able to see all client beacons' do
+    sign_in @user
+    @beacon = FactoryGirl.create :beacon, :client => @user.client
+    get :index
+    assigns(:beacons).include?(@beacon).should ==true
+
+    
+  end
+
   describe 'should be able to edit a beacon' do
     before :each do 
       sign_in @user
-      @beacon = FactoryGirl.create :beacon
-      @beacon.client = @user.client
+      @beacon = FactoryGirl.create :beacon, :client => @user.client
       @beacon.save
     end
 

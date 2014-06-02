@@ -1,0 +1,18 @@
+section
+  .page.page-table.ng-scope
+    .panel.panel-default
+      .panel-heading
+        strong
+          span.glyphicon.glyphicon-th
+          | Shopping List Items
+      table.table
+        thead
+          tr
+            th Name
+            th User
+        tbody
+          -@shopping_list_items.each do |shopping_list_item|
+            tr
+              td #{shopping_list_item.name}
+              td #{shopping_list_item.user.display_name}
+
