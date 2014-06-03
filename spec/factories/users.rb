@@ -6,6 +6,10 @@ FactoryGirl.define do
     password '12345678'
 
     association :client
+    after(:create) do |user, evaluator|
+      user.client =  evaluator.client if  evaluator.client
+      user.save
+    end
 
   end
 

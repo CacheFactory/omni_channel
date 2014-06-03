@@ -1,3 +1,4 @@
-section.alerts
-  p.notice #{notice}
-  p.alert #{alert}  
+-if notice || alert
+  section.alerts
+    p.notice #{notice}
+    p.alert #{alert}  

@@ -1,0 +1,22 @@
+-if @client.errors.any?
+  =render 'shared/errors', :errors => @client.errors.full_messages
+section.panel.panel-default
+  .panel-heading
+    strong
+      span.glyphicon.glyphicon-th
+      | Edit your location's information
+  .panel-body
+    =form_for ['admin',@client], :html => {:class => 'form-horizontal'} do |f|
+        .form-group
+          label.col-sm-2 Name
+          .col-sm-10
+            =f.text_field :name, :class => 'form-control'
+        .form-group
+          label.col-sm-2 
+          .col-sm-10
+            =f.submit
+          
+
+
+
+

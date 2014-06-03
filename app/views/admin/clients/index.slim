@@ -1,5 +1,4 @@
 .page.page-dashboard.ng-scope data-ng-controller="DashboardCtrl" 
-  /! stats
   .row
     .col-lg-3.col-xsm-6
       .panel.mini-box
@@ -35,4 +34,6 @@
           p.size-h2 262
           p.text-muted
             span data-i18n="Sales"  Sales
-  /! end stats
+  .row
+    .col-lg-3.col-xsm-6
+      =link_to 'Edit location info', edit_admin_client_path(@client), :class => 'btn btn-primary'

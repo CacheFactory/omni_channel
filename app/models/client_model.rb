@@ -16,9 +16,5 @@ class ClientModel < ActiveRecord::Base
     'grey'
   end
 
-  def self.active #default active
-    all
-  end
-
 
 end

@@ -12,6 +12,7 @@ OmniChannel::Application.routes.draw do
     resources :shopping_list_items
     resources :beacons
     resources :sale_items
+    resources :users
   end
 
   

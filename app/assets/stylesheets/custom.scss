@@ -3,5 +3,14 @@
   z-index: 1000;
   display: block;
   height: 30px;
-  width: 100%;
+  width: 50%;
+  left:25%;
+  margin: 10px;
+  background-color: lightblue;
+  
+  border-radius: 2px;
+  text-align: center;
+  .notice,.alert{
+    color: black;
+  }
 }

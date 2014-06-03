@@ -1,0 +1,189 @@
+.page.page-profile.ng-scope
+  .row
+    .col-md-6
+      .panel.panel-profile
+        .panel-heading.bg-primary.clearfix
+          a.pull-left.profile href="" 
+            img.img-circle.img80_80 alt="" src=@user.avatar.url
+          h3.ng-binding #{@user.display_name}
+          /p Project Manager
+        /ul.list-group
+          li.list-group-item
+            span.badge.badge-danger 6
+            i.fa.fa-envelope-o
+            | Cras justo odio
+          li.list-group-item
+            span.badge.badge-warning 2
+            i.fa.fa-comments-o
+            | Dapibus ac facilisis in
+          li.list-group-item
+            span.badge.badge-info 1
+            i.fa.fa-heart-o
+            | Morbi leo risus
+          li.list-group-item
+            span.badge.badge-success 3
+            i.fa.fa-folder-open-o
+            | Vestibulum at eros
+      /.row
+        .col-sm-6
+          section.panel.panel-box
+            .panel-top.bg-facebook
+              .divider.divider
+              i.fa.fa-facebook.size-h1
+              .divider.divider
+            .list-justified-container
+              ul.list-justified.text-center
+                li
+                  p.size-h3 575
+                  p.text-muted Followers
+                li
+                  p.size-h3 23
+                  p.text-muted Following
+        .col-sm-6
+          section.panel.panel-box
+            .panel-top.bg-twitter
+              .divider.divider
+              i.fa.fa-twitter.size-h1
+              .divider.divider
+            .list-justified-container
+              ul.list-justified.text-center
+                li
+                  p.size-h3 575
+                  p.text-muted Followers
+                li
+                  p.size-h3 23
+                  p.text-muted Following
+    .col-md-6
+      .row
+        .col-sm-6
+          .panel.mini-box
+            span.box-icon.bg-danger
+              i.fa.fa-film
+            .box-info
+              p.size-h2 39
+              p.text-muted Amazing Films
+        .col-sm-6
+          .panel.mini-box
+            span.box-icon.bg-warning
+              i.fa.fa-camera
+            .box-info
+              p.size-h2 63
+              p.text-muted Wonderful Photos
+      .row
+        .col-sm-6
+          .panel.mini-box
+            span.box-icon.bg-success
+              i.fa.fa-bookmark-o
+            .box-info
+              p.size-h2 55
+              p.text-muted New Collections
+        .col-sm-6
+          .panel.mini-box
+            span.box-icon.bg-info
+              i.fa.fa-check
+            .box-info
+              p.size-h2 34
+              p.text-muted Tasks Finised
+      .panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            | Profile Info
+        .panel-body
+          .media
+            .media-body
+              ul.list-unstyled.list-info
+                li.ng-binding
+                  span.icon.glyphicon.glyphicon-user
+                  label User name
+                  | Lisa Doe
+                li
+                  span.icon.glyphicon.glyphicon-envelope
+                  label Email
+                  | name@example.com
+                li
+                  span.icon.glyphicon.glyphicon-home
+                  label Address
+                  | Street 123, Avenue 45, Country
+                li
+                  span.icon.glyphicon.glyphicon-earphone
+                  label Contact
+                  | (+012) 345 6789
+                li
+                  span.icon.glyphicon.glyphicon-flag
+                  label Nationality
+                  | Australia
+  /.panel.panel-default
+    .panel-heading
+      strong
+        span.glyphicon.glyphicon-th
+        | Table - General
+    table.table
+      thead
+        tr
+          th #
+          th Project
+          th Manager
+          th Status
+          th Progress
+      tbody
+        tr
+          td 1
+          td
+            span.color-success
+              i.fa.fa-level-up
+            | TWLT
+          td Amery Lee
+          td
+            span.label.label-info Pending
+          td
+            .progressbar-xs.no-margin.progress.ng-isolate-scope value="55" 
+              .progress-bar ng-class=("type &amp;&amp; 'progress-bar-' + type") ng-transclude="" style=("width: 55%;") 
+        tr
+          td 2
+          td
+            span.color-success
+              i.fa.fa-level-up
+            | A16Z
+          td Romayne Carlyn
+          td
+            span.label.label-primary Due
+          td
+            .progressbar-xs.no-margin.progress.ng-isolate-scope type="success" value="34" 
+              .progress-bar.progress-bar-success ng-class=("type &amp;&amp; 'progress-bar-' + type") ng-transclude="" style=("width: 34%;") 
+        tr
+          td 3
+          td
+            span.color-warning
+              i.fa.fa-level-down
+            | DARK
+          td Marybeth Joanna
+          td
+            span.label.label-success Due
+          td
+            .progressbar-xs.no-margin.progress.ng-isolate-scope type="info" value="68" 
+              .progress-bar.progress-bar-info ng-class=("type &amp;&amp; 'progress-bar-' + type") ng-transclude="" style=("width: 68%;") 
+        tr
+          td 4
+          td
+            span.color-info
+              i.fa.fa-level-up
+            | Q300
+          td Jonah Benny
+          td
+            span.label.label-danger Blocked
+          td
+            .progressbar-xs.no-margin.progress.ng-isolate-scope type="warning" value="52" 
+              .progress-bar.progress-bar-warning ng-class=("type &amp;&amp; 'progress-bar-' + type") ng-transclude="" style=("width: 52%;") 
+        tr
+          td 5
+          td
+            span.color-danger
+              i.fa.fa-level-down
+            | RVNG
+          td Daly Royle
+          td
+            span.label.label-warning Suspended
+          td
+            .progressbar-xs.no-margin.progress.ng-isolate-scope type="danger" value="77" 
+              .progress-bar.progress-bar-danger ng-class=("type &amp;&amp; 'progress-bar-' + type") ng-transclude="" style=("width: 77%;") 
